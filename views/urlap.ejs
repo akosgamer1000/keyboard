@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <label for="name">Name</label><br>
+        <input id="name" name="name" value="<%= data.name %>" type="text"><br>
+
+        <h3>Billing Address</h3>
+        <label for="szam_orszag">Country</label><br>
+        <input id="szam_orszag" name="szam_country" value="<%= data.szam_country %>" type="text"><br>
+        
+        <label for="szam_irányitószám">Postal Code</label><br>
+        <input id="szam_irányitószám" name="szam_postalCode" value="<%= data.szam_postalCode %>" type="text"><br>
+        
+        <label for="szam_Város">City</label><br>
+        <input id="szam_Város" name="szam_city" value="<%= data.szam_city %>" type="text"><br>
+        
+        <label for="szam_Utca és házszám">Street and House Number</label><br>
+        <input id="szam_Utca és házszám" name="szam_streetAndNumber" value="<%= data.szam_streetAndNumber %>" type="text"><br>
+
+        <h3>Shipping Address</h3>
+        <label for="szal_orszag">Country</label><br>
+        <input id="szal_orszag" name="szal_country" value="<%= data.szal_country %>" type="text"><br>
+        
+        <label for="szal_irányitószám">Postal Code</label><br>
+        <input id="szal_irányitószám" name="szal_postalCode" value="<%= data.szal_postalCode %>" type="text"><br>
+        
+        <label for="szal_Város">City</label><br>
+        <input id="szal_Város" name="szal_city" value="<%= data.szal_city %>" type="text"><br>
+        
+        <label for="szal_Utca és házszám">Street and House Number</label><br>
+        <input id="szal_Utca és házszám" name="szal_streetAndNumber" value="<%= data.szal_streetAndNumber %>" type="text"><br>
+
+        <label for="kuponcod">Coupon Code</label><br>
+        <input id="kuponcod" name="couponCode" value="<%= data.couponCode %>" type="text"><br>
+
+        <h3>Credit Card Information</h3>
+        <label for="bankkártyaszám">Card Number</label><br>
+        <input id="bankkártyaszám" name="cardNumber" value="<%= data.cardNumber %>" type="text"><br>
+        
+        <label for="lejárati">Expiration Date</label><br>
+        <input id="lejárati" name="expirationDate" value="<%= data.expirationDate %>" type="text"><br>
+        
+        <label for="biztonságikod">Security Code</label><br>
+        <input id="biztonságikod" name="securityCode" value="<%= data.securityCode %>" type="number"><br>
+        
+        <input type="submit">
+    </form>
+    <% for(let err of errors){ %>
+      <p style="color:red"><%=err %></p>
+      <% } %>
+</body>
+</html>
