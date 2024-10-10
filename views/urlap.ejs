@@ -25,7 +25,7 @@
     }
     input[type="text"], 
     input[type="number"], 
-    input[type="submit"] {
+    input[type="submit"],.form-control {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -49,14 +49,15 @@
   </style>
 </head>
 <body>
-    <form method="post">
-        <label for="name">Name</label><br>
-        <input id="name" name="name" value="<%= data.name %>" type="text"><br>
-
-        <h3>Billing Address</h3>
-        <label for="country">Country</label><span style="color: red !important; display: inline; float: none;">*</span>      
-        
-            <select id="country" name="szam_country" class="form-control">
+  <form method="post">
+    <label for="name">Name</label><br>
+    <input id="name" name="name" value="<%= data.name %>" type="text"><br>
+    
+    <h3>Billing Address</h3>
+    <label for="country">Country</label><span style="color: red !important; display: inline; float: none;">*</span>      
+    
+    <select id="country" name="szam_country" class="form-control">
+                 <option value="Hungary">Hungary</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
@@ -155,7 +156,6 @@
                 <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
                 <option value="Honduras">Honduras</option>
                 <option value="Hong Kong">Hong Kong</option>
-                <option value="Hungary">Hungary</option>
                 <option value="Iceland">Iceland</option>
                 <option value="India">India</option>
                 <option value="Indonesia">Indonesia</option>
@@ -311,9 +311,10 @@
         
         <label for="szam_Utca és házszám">Street and House Number</label><br>
         <input id="szam_Utca és házszám" name="szam_streetAndNumber" value="<%= data.szam_streetAndNumber %>" type="text"><br>
-
+        
         <h3>Shipping Address</h3>
         <select id="country" name="szal_country" class="form-control">
+          <option value="Hungary">Hungary</option>
           <option value="Afghanistan">Afghanistan</option>
           <option value="Åland Islands">Åland Islands</option>
           <option value="Albania">Albania</option>
@@ -412,7 +413,6 @@
           <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
           <option value="Honduras">Honduras</option>
           <option value="Hong Kong">Hong Kong</option>
-          <option value="Hungary">Hungary</option>
           <option value="Iceland">Iceland</option>
           <option value="India">India</option>
           <option value="Indonesia">Indonesia</option>
