@@ -40,7 +40,7 @@ export class AppController {
       if(!/\d{4}-\d{4}-\d{4}-\d{4}$/.test(data.cardNumber)){
         errors.push("nem jó a bankártya formátum (XXXX-XXXX-XXXX)")
       }
-      if(!/^\d{3}$/.test(data.expirationDate)){
+      if(!/^\d{3}$/.test(  data.securityCode.toString())){
         errors.push("nem jó lejárati formátum ami jó lenne ")
       }
       if(errors.length>0){
